@@ -1,0 +1,15 @@
+{
+  "appName": "Liberty Transcripts",
+  "features": {
+    "enableNotifications": true,
+    "enableDarkMode": false
+  },
+  "server": {
+    "host": "localhost",
+    "port": 443
+  },
+  "defaultSettings": {
+    "language": "en",
+    "theme": "light"
+  }
+}
