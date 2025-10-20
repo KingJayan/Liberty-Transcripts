@@ -58,11 +58,25 @@ The site uses PHP-based routing in `src/index.php`:
 ## Recent Changes
 - **2025-10-20**: Initial Replit environment setup
   - Created .gitignore for PHP project
-  - Created data directories for uploads and form submissions
+  - Created data directories for uploads and form submissions (outside web root for security)
   - Configured PHP built-in server workflow on port 5000
   - Created project documentation
+  - Fixed routing bugs in index.php (malformed in_array entries)
+  - Updated config.json to match correct server settings (port 5000, host 0.0.0.0)
+  - Added .htaccess to prevent direct access to data directory under src
+  - Created deployment script with PORT environment variable support
+
+## Security
+- User uploads are stored in `data/` directory at project root (outside web root)
+- Removed `src/data/` to prevent any files under web root
+- Router script (`router.php`) blocks access to:
+  - `/data/` paths
+  - Sensitive PHP files (phpinfo.php, monitor.php, upload.php, request-form-handle.php)
+- Removed phpinfo.php and monitor.php from src directory
 
 ## Notes
 - The `data/` directory is gitignored to prevent committing user uploads and form submissions
 - The website uses W3.CSS for responsive design
-- Some PHP files (upload.php, request-form-handle.php) are marked as "NOT IN USE" but kept for reference
+- Deployment uses autoscale target with bash script that respects PORT environment variable
+- Router script is used with PHP built-in server for security and proper routing
+- Some PHP files (upload.php, request-form-handle.php) contain file handling logic but routing in index.php determines which pages are actually served

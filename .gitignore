@@ -6,6 +6,7 @@ composer.lock
 .phpunit.result.cache
 
 # User uploads and data
+data/
 src/data/
 w3s-dynamic-storage/
 
