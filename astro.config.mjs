@@ -12,5 +12,17 @@ export default defineConfig({
   },
   build: {
     format: 'file'
+  },
+  vite: {
+    server: {
+      allowedHosts: [
+        // Allow your Replit dev host
+        '36afafe3-3852-46f3-a08c-39e71a8c2b6a-00-27dekw7dxcpve.riker.replit.dev',
+        // Optionally allow all replit.dev subdomains (future-proof)
+        '*.replit.dev',
+        'libertytranscripts2.w3spaces.com/',
+        'libertytranscripts.com'
+      ]
+    }
   }
 });
