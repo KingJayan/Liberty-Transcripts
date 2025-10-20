@@ -1,57 +1,43 @@
-# 👋 Hello developer!
+# Astro Starter Kit: Minimal
 
-This is one of the many templates available from W3Schools. We recommend exploring our [tutorials for frontend development](https://www.w3schools.com/where_to_start.asp) to gain a comprehensive understanding of the basics of [HTML](https://www.w3schools.com/html/default.asp), [CSS](https://www.w3schools.com/css/default.asp) and [JavaScript](https://www.w3schools.com/js/default.asp). As a supplement to your already advanced skills in PHP, we also recommend utilizing our [PHP tutorial](https://www.w3schools.com/php/default.asp) to enhance your coding experience.🦄
+```sh
+npm create astro@latest -- --template minimal
+```
 
-## Knowledge requirements
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-In order to fully comprehend and tailor this template to your specific requirements, it is recommended that you possess a certain level of knowledge and understanding of the following concepts:
+## 🚀 Project Structure
 
-- [HTML](https://www.w3schools.com/html/default.asp)
-- [CSS](https://www.w3schools.com/css/default.asp)
-- [JavaScript](https://www.w3schools.com/js/default.asp)
-- [PHP](https://www.w3schools.com/php/default.asp)
+Inside of your Astro project, you'll see the following folders and files:
 
-## 🔨 What's next?
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
 
-Customize this template to make it your own.  
-Remember it is important to ensure that the layout is responsive in order to optimize the viewing experience on various screen sizes, including mobile devices.
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-## Important
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-Save the files inside `src/`.
-## 🎨 Where to find everything?
+Any static assets, like images, can be placed in the `public/` directory.
 
-This template is made by using several technologies.
-Below are explanations about where to find specific code.
+## 🧞 Commands
 
-### HTML
+All commands are run from the root of the project, from a terminal:
 
-The HTML is baked into PHP files. You can find the `index.php` in `src/`.
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-### CSS
+## 👀 Want to learn more?
 
-CSS files can be found in `/src/style.css`.  
-
-### Core files
-
-You can find:
-  - the index in `src/index.php`.
-
-### Database
-
-Dynamic spaces can use [SQLite](https://www.sqlite.org/docs.html) database.  
-The database file is called `database.db`. It is placed inside the `w3s-dynamic-storage` folder.  
-SQLite connection path to the database is `w3s-dynamic-storage/database.db` which you can use to connect to the SQLite database programmatically.   
-
----  
-**Do not change the `w3s-dynamic-storage` folder name or `database.db` file name!**  
-**By changing the `w3s-dynamic-storage` folder name or `database.db` file name, you risk the space not working properly.**
-
-## 🔨 Please note
-For now files created/uploaded or edited from within the terminal view will not be backed up or synced. 
-
-## ⛑ Need support?
-[Join our Discord community](https://discord.gg/6Z7UaRbUQM) and ask questions in the **#spaces-general** channel to get your space on the next level.  
-[Send us a ticket](https://support.w3schools.com/hc/en-gb) if you have any technical issues with Spaces.
-
-Happy coding!
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

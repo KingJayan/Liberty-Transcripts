@@ -1,4 +1,0 @@
-# Deny access to data directory if it exists under src
-<DirectoryMatch "^.*/data">
-    Require all denied
-</DirectoryMatch>
