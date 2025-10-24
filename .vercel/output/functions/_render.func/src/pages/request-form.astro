@@ -1,0 +1,17 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import TranscriptRequestForm from '../components/TranscriptRequestForm.vue';
+---
+
+<MainLayout title="Bankruptcy Transcript Request | Liberty Transcripts">
+  <div class="w3-container" style="background-color:white;">
+    <h1 class="w3-raleway w3-xxxlarge">Transcript Request Form</h1>
+  </div>
+  <br />
+  <p style="text-align: center;">Please fill out the form below to request a bankruptcy transcript. All fields marked with <span style="color: red;">*</span> are required.</p>
+  <br />
+  
+  <TranscriptRequestForm client:load />
+  
+  <br />
+</MainLayout>
