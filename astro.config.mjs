@@ -1,26 +1,19 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import vercel from '@astrojs/vercel/serverless';
 import vue from '@astrojs/vue';
+import vercel from '@astrojs/vercel/serverless';
 
-// https://astro.build/config
 export default defineConfig({
   integrations: [vue()],
-  output: 'server',
-  adapter: vercel({}),
+  output: 'server', // enables SSR
+  adapter: vercel({}), // no arguments here
   vite: {
-    server: process.env.REPL_ID  // for replit
-      ? {
-        allowedHosts: [
-          '*.replit.dev',
-          'libertytranscripts.com'
-        ]
-      }
-      : {
-        allowedHosts: [
-          'localhost',
-          '127.0.0.1'
-        ]
-      }
+    server: {
+      allowedHosts: [
+        '*.replit.dev',
+        'libertytranscripts2.w3spaces.com',
+        'libertytranscripts.com'
+      ]
+    }
   }
 });
